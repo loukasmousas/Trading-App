@@ -9,14 +9,14 @@
 int main()
 {
 
-    //MerkelMain app{};
-    //app.init();
-    Wallet Wallet;
+    MerkelMain app{};
+    app.init();
+ /*   Wallet Wallet;
     Wallet.insertCurrency("BTC", 10);
     Wallet.insertCurrency("USDT", 10000);
     std::cout << Wallet.toString() << std::endl;
     Wallet.removeCurrency("USDT", 1000);
-    std::cout << Wallet.toString() << std::endl;
+    std::cout << Wallet.toString() << std::endl;*/
 
 }
 

@@ -103,7 +103,14 @@ void MerkelMain::enterAsk()
                 tokens[0],
                 OrderBookType::ask
             );
-            orderBook.insertOrder(obe);
+            if (Wallet.canFulfillOrder(obe))
+            {
+                std::cout << "Wallet looks good. " << std::endl;
+                orderBook.insertOrder(obe);
+            }
+            else {
+                std::cout << "Wallet has insufficient funds. " << std::endl;
+            }
         }
         catch (const std::exception& e)
         {
