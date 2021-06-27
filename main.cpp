@@ -13,7 +13,9 @@ int main()
     //app.init();
     Wallet Wallet;
     Wallet.insertCurrency("BTC", 10);
-    std::cout << "Wallet has BTC " << Wallet.containsCurrency("BTC", 10) << std::endl;
+    Wallet.insertCurrency("USDT", 10000);
+    std::cout << Wallet.toString() << std::endl;
+    Wallet.removeCurrency("USDT", 1000);
     std::cout << Wallet.toString() << std::endl;
 
 }
