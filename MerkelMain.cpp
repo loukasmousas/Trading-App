@@ -14,6 +14,9 @@ void MerkelMain::init()
 {
     int input;
     currentTime = orderBook.getEarliestTime();
+
+    Wallet.insertCurrency("BTC", 10);
+
     while (true)
     {
         printMenu();
@@ -119,6 +122,7 @@ void MerkelMain::enterBid()
 void MerkelMain::printWallet()
 {
     std::cout << "Your wallet is empty. " << std::endl;
+    std::cout << Wallet.toString() << std::endl;
 }
 
 void MerkelMain::gotoNextTimeframe()
